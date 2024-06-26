@@ -1,0 +1,29 @@
+### model
+model_name_or_path: /home/wangguisen/models/Qwen1.5-14B-Chat
+adapter_name_or_path: /home/wangguisen/projects/LLaMA-Factory/checkpoint/qwen1.5_14b_checkpoint_dialog_sft_int4_20240517/checkpoint-5000
+
+### method
+finetuning_type: lora
+# quantization_bit: 4
+
+### dataset
+task_dir: ./evaluation
+tasks:
+  - mmlu
+  - cmmlu
+  - ceval
+langs:
+  - en
+  - zh
+  - zh
+splits:
+  - test
+  - test
+  - validation
+template: qwen
+
+### output
+save_dir: ./output
+
+### eval
+batch_size: 1

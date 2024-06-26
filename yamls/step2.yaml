@@ -1,0 +1,2 @@
+model_path: /home/wangguisen/models/gte-large-zh
+output_dir: ./output

@@ -1,0 +1,8 @@
+model_path: /home/wangguisen/models/Qwen1.5-14B-Chat
+reward_model_path: /home/wangguisen/models/BaichuanCharRM
+task_dir: ./evaluation/CharacterEval
+output_dir: ./output/CharacterEval
+
+adapter_name_or_path: /home/wangguisen/projects/LLaMA-Factory/checkpoint/qwen1.5_14b_checkpoint_dialog_sft_int4_20240517/checkpoint-5000
+template: qwen
+finetuning_type: lora

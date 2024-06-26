@@ -1,0 +1,27 @@
+### model
+model_name_or_path: /home/wangguisen/models/Qwen1.5-14B-Chat
+adapter_name_or_path: /home/wangguisen/projects/LLaMA-Factory/checkpoint/qwen1.5_14b_checkpoint_dialog_sft_int4_20240517/checkpoint-5000
+# quantization_bit: 4
+
+### method
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### dataset
+dataset_dir: ./data
+dataset: demo.json
+template: qwen
+cutoff_len: 1024
+max_samples: 50   # 每个数据集采样多少用于预测对比
+overwrite_cache: True
+preprocessing_num_workers: 16
+
+### output
+output_dir: ./output
+overwrite_output_dir: True
+
+### eval
+per_device_eval_batch_size: 1
+predict_with_generate: True   # 现在用于生成文本
+

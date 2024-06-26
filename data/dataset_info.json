@@ -1,0 +1,11 @@
+{
+    "demo.json": {
+        "file_name": "demo.json",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output",
+            "history": "history"
+        }
+    }
+}
